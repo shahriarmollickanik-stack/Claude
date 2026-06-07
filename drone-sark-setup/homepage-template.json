@@ -1,0 +1,355 @@
+[{
+  "version": "0.4",
+  "title": "Drone Sark – Homepage (Complete)",
+  "type": "page",
+  "content": [
+
+    {
+      "id": "sec_hero",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#0a0a0a",
+        "padding": {"unit":"px","top":"100","right":"80","bottom":"100","left":"80","isLinked":false},
+        "padding_tablet": {"unit":"px","top":"80","right":"40","bottom":"80","left":"40","isLinked":false},
+        "padding_mobile": {"unit":"px","top":"60","right":"24","bottom":"60","left":"24","isLinked":false},
+        "layout": "full_width",
+        "height": "min-height",
+        "custom_height": {"unit":"vh","size":85,"sizes":[]},
+        "column_position": "middle"
+      },
+      "elements": [
+        {
+          "id": "col_hero_txt",
+          "elType": "column",
+          "settings": {"_column_size": 50, "_inline_size": null},
+          "elements": [
+            {
+              "id": "w_pre",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "EXPLORE. CAPTURE. ELEVATE.",
+                "header_size": "p",
+                "title_color": "rgba(255,255,255,0.5)",
+                "typography_typography": "custom",
+                "typography_font_size": {"unit":"px","size":11,"sizes":[]},
+                "typography_font_weight": "700",
+                "typography_letter_spacing": {"unit":"px","size":3},
+                "typography_text_transform": "uppercase",
+                "_padding": {"unit":"px","top":"0","right":"0","bottom":"16","left":"0","isLinked":false}
+              },
+              "elements": []
+            },
+            {
+              "id": "w_h1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Next Level<br>Drone Experience",
+                "header_size": "h1",
+                "title_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_size": {"unit":"px","size":64,"sizes":[]},
+                "typography_font_size_tablet": {"unit":"px","size":44,"sizes":[]},
+                "typography_font_size_mobile": {"unit":"px","size":34,"sizes":[]},
+                "typography_font_weight": "800",
+                "typography_line_height": {"unit":"em","size":1.1,"sizes":[]},
+                "_padding": {"unit":"px","top":"0","right":"0","bottom":"20","left":"0","isLinked":false}
+              },
+              "elements": []
+            },
+            {
+              "id": "w_sub",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Premium drones, accessories, repair services, and professional drone solutions — all in one place. Bangladesh's #1 drone store.</p>",
+                "text_color": "rgba(255,255,255,0.7)",
+                "typography_typography": "custom",
+                "typography_font_size": {"unit":"px","size":17,"sizes":[]},
+                "typography_line_height": {"unit":"em","size":1.75,"sizes":[]},
+                "_padding": {"unit":"px","top":"0","right":"0","bottom":"32","left":"0","isLinked":false}
+              },
+              "elements": []
+            },
+            {
+              "id": "w_btns",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"display:flex;gap:16px;flex-wrap:wrap;\"><a href=\"/shop/\" style=\"display:inline-flex;align-items:center;background:#fff;color:#000;padding:15px 32px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;font-family:inherit;\">Shop Now</a><a href=\"/contact/\" style=\"display:inline-flex;align-items:center;background:transparent;color:#fff;padding:15px 32px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;border:2px solid rgba(255,255,255,0.5);font-family:inherit;\">Get In Touch</a></div>"
+              },
+              "elements": []
+            },
+            {
+              "id": "w_feat",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"display:flex;flex-wrap:wrap;gap:24px;margin-top:32px;\"><span style=\"display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:13px;font-weight:500;\">✓ Free Delivery</span><span style=\"display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:13px;font-weight:500;\">✓ Expert Support</span><span style=\"display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:13px;font-weight:500;\">✓ Genuine Products</span><span style=\"display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.65);font-size:13px;font-weight:500;\">✓ Cash on Delivery</span></div>",
+                "_padding": {"unit":"px","top":"8","right":"0","bottom":"0","left":"0","isLinked":false}
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "col_hero_img",
+          "elType": "column",
+          "settings": {"_column_size": 50, "_inline_size": null},
+          "elements": [
+            {
+              "id": "w_hero_img",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {"url": "https://placehold.co/700x500/111/fff?text=Add+Drone+Image", "id": ""},
+                "image_size": "full",
+                "align": "center",
+                "width": {"unit":"%","size":100,"sizes":[]},
+                "border_radius": {"unit":"px","top":"20","right":"20","bottom":"20","left":"20","isLinked":true},
+                "_label": "Replace with your drone image"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_cats_title",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {"unit":"px","top":"70","right":"40","bottom":"0","left":"40","isLinked":false}
+      },
+      "elements": [
+        {
+          "id": "col_cats_t",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "w_cats_lbl",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid #e8e8e8;padding-bottom:20px;margin-bottom:0;\"><div><p style=\"font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#000;margin:0 0 8px;\">SHOP BY CATEGORY</p><div style=\"width:28px;height:2px;background:#000;\"></div></div><a href=\"/shop/\" style=\"font-size:13px;font-weight:600;color:#000;text-decoration:none;\">View All →</a></div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_cats",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {"unit":"px","top":"28","right":"40","bottom":"70","left":"40","isLinked":false}
+      },
+      "elements": [
+        {
+          "id": "col_cats",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "w_cats_sc",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "settings": {
+                "shortcode": "[product_categories number=\"4\" columns=\"4\" hide_empty=\"0\"]"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_prods_title",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#f7f7f7",
+        "padding": {"unit":"px","top":"70","right":"40","bottom":"0","left":"40","isLinked":false}
+      },
+      "elements": [
+        {
+          "id": "col_p_t",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "w_p_lbl",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid #e8e8e8;padding-bottom:20px;\"><div><p style=\"font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#000;margin:0 0 8px;\">ALL PRODUCTS</p><div style=\"width:28px;height:2px;background:#000;\"></div></div><a href=\"/shop/\" style=\"font-size:13px;font-weight:600;color:#000;text-decoration:none;\">View All →</a></div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_prods",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#f7f7f7",
+        "padding": {"unit":"px","top":"28","right":"40","bottom":"70","left":"40","isLinked":false}
+      },
+      "elements": [
+        {
+          "id": "col_prods",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "w_prods_sc",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "settings": {
+                "shortcode": "[products limit=\"8\" columns=\"4\" orderby=\"date\" order=\"DESC\"]"
+              },
+              "elements": []
+            },
+            {
+              "id": "w_view_more",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"text-align:center;margin-top:32px;\"><a href=\"/shop/\" style=\"display:inline-flex;align-items:center;background:transparent;color:#000;padding:14px 48px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;border:2px solid #000;font-family:inherit;\">View All Products →</a></div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_repair",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {"unit":"px","top":"70","right":"40","bottom":"70","left":"40","isLinked":false}
+      },
+      "elements": [
+        {
+          "id": "col_repair",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "w_repair_card",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"background:#0a0a0a;border-radius:24px;padding:56px;display:flex;align-items:center;gap:48px;flex-wrap:wrap;\"><div style=\"flex:1;min-width:280px;\"><span style=\"display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.15);border-radius:4px;padding:5px 12px;margin-bottom:20px;\">REPAIR SERVICE</span><h2 style=\"font-size:36px;font-weight:800;color:#fff;line-height:1.15;margin:0 0 16px;\">Drone Repair &amp;<br>Maintenance</h2><p style=\"color:rgba(255,255,255,0.65);font-size:15px;line-height:1.75;margin:0 0 20px;\">Fast, professional drone repair by certified technicians. We fix all makes &amp; models — from sensor calibration to full motor overhauls.</p><ul style=\"list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;\"><li style=\"color:rgba(255,255,255,0.7);font-size:14px;\">✓ All brands &amp; models</li><li style=\"color:rgba(255,255,255,0.7);font-size:14px;\">✓ Genuine spare parts</li><li style=\"color:rgba(255,255,255,0.7);font-size:14px;\">✓ Quick turnaround</li><li style=\"color:rgba(255,255,255,0.7);font-size:14px;\">✓ Service warranty</li></ul><a href=\"/product-category/repair/\" style=\"display:inline-flex;background:#fff;color:#000;padding:15px 32px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;\">Book Repair →</a></div><div style=\"flex:1;min-width:240px;text-align:center;\"><div style=\"background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:40px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;\"><p style=\"color:rgba(255,255,255,0.3);font-size:13px;\">🔁 Add repair/workshop image here</p></div></div></div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_svcs",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#f7f7f7",
+        "padding": {"unit":"px","top":"70","right":"40","bottom":"70","left":"40","isLinked":false}
+      },
+      "elements": [
+        {
+          "id": "col_svcs",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "w_svcs_lbl",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid #e8e8e8;padding-bottom:20px;margin-bottom:28px;\"><div><p style=\"font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#000;margin:0 0 8px;\">OTHER SERVICES</p><div style=\"width:28px;height:2px;background:#000;\"></div></div><a href=\"/product-category/other-services/\" style=\"font-size:13px;font-weight:600;color:#000;text-decoration:none;\">See All →</a></div><div style=\"display:grid;grid-template-columns:repeat(4,1fr);gap:20px;\"><div style=\"background:#fff;border:1px solid #e8e8e8;border-radius:16px;padding:28px 24px;\"><div style=\"width:52px;height:52px;background:#000;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;\"><svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 10v6M2 10l10-5 10 5-10 5z'/><path d='M6 12v5c3 3 9 3 12 0v-5'/></svg></div><h3 style=\"font-size:15px;font-weight:700;margin:0 0 8px;\">Drone Training</h3><p style=\"font-size:13px;color:#707070;line-height:1.65;margin:0;\">Professional flight training for beginners to advanced pilots. Get certified and fly with confidence.</p></div><div style=\"background:#fff;border:1px solid #e8e8e8;border-radius:16px;padding:28px 24px;\"><div style=\"width:52px;height:52px;background:#000;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;\"><svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='3 11 22 2 13 21 11 13 3 11'/></svg></div><h3 style=\"font-size:15px;font-weight:700;margin:0 0 8px;\">Aerial Survey</h3><p style=\"font-size:13px;color:#707070;line-height:1.65;margin:0;\">High-resolution aerial surveys for construction, agriculture, and real estate projects.</p></div><div style=\"background:#fff;border:1px solid #e8e8e8;border-radius:16px;padding:28px 24px;\"><div style=\"width:52px;height:52px;background:#000;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;\"><svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6'/><line x1='8' y1='2' x2='8' y2='18'/><line x1='16' y1='6' x2='16' y2='22'/></svg></div><h3 style=\"font-size:15px;font-weight:700;margin:0 0 8px;\">3D Mapping</h3><p style=\"font-size:13px;color:#707070;line-height:1.65;margin:0;\">Precise 3D photogrammetry mapping for GIS, land development, and urban planning.</p></div><div style=\"background:#fff;border:1px solid #e8e8e8;border-radius:16px;padding:28px 24px;\"><div style=\"width:52px;height:52px;background:#000;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;\"><svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z'/></svg></div><h3 style=\"font-size:15px;font-weight:700;margin:0 0 8px;\">Consultation</h3><p style=\"font-size:13px;color:#707070;line-height:1.65;margin:0;\">Expert drone consulting for businesses integrating drone technology into their workflow.</p></div></div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_revs",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {"unit":"px","top":"70","right":"40","bottom":"70","left":"40","isLinked":false}
+      },
+      "elements": [
+        {
+          "id": "col_revs",
+          "elType": "column",
+          "settings": {"_column_size": 100},
+          "elements": [
+            {
+              "id": "w_revs_lbl",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"border-bottom:1px solid #e8e8e8;padding-bottom:20px;margin-bottom:28px;\"><p style=\"font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#000;margin:0 0 8px;\">WHAT OUR CUSTOMERS SAY</p><div style=\"width:28px;height:2px;background:#000;\"></div></div>"
+              },
+              "elements": []
+            },
+            {
+              "id": "w_revs_car",
+              "elType": "widget",
+              "widgetType": "testimonial-carousel",
+              "settings": {
+                "skin": "default",
+                "slides_per_view": 4,
+                "slides_per_view_tablet": 2,
+                "slides_per_view_mobile": 1,
+                "autoplay": "yes",
+                "autoplay_speed": 4000,
+                "pause_on_hover": "yes",
+                "loop": "yes",
+                "navigation": "both",
+                "slides": [
+                  {"_id":"rv1","content":"\"Absolutely love my new DJI Mavic 3 Pro from Drones Ark! Delivery was super fast and the team helped me pick the perfect drone for my needs.\"","name":"Rahim Ahmed","title":"Verified Buyer"},
+                  {"_id":"rv2","content":"\"Best drone shop in Bangladesh. Got my Mini 4 Pro with all accessories. The repair service fixed my old drone in just 2 days!\"","name":"Priya Sharma","title":"Verified Buyer"},
+                  {"_id":"rv3","content":"\"Excellent customer service and genuine products. Steadfast delivery was quick and well-packaged. Will definitely order again.\"","name":"Tanvir Khan","title":"Verified Buyer"},
+                  {"_id":"rv4","content":"\"Enrolled in the drone training program — absolutely worth it! Instructors are knowledgeable and patient. Highly recommended!\"","name":"Nadia Begum","title":"Training Student"},
+                  {"_id":"rv5","content":"\"Professional mapping service exceeded our expectations. Aerial data was precise and delivered on time. Great team!\"","name":"Sajid Islam","title":"Business Client"},
+                  {"_id":"rv6","content":"\"Bought accessories for my old DJI Phantom. Very fair prices and parts were exactly as described. Fast shipping too!\"","name":"Farida Hossain","title":"Verified Buyer"}
+                ]
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+
+  ],
+  "page_settings": {
+    "template": "elementor_header_footer"
+  }
+}]
