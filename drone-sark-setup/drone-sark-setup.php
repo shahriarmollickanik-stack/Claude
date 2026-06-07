@@ -305,18 +305,19 @@ function dss_create_elementor_template( string $type, string $title, string $jso
    HELPER: Register display condition in Elementor Pro's option cache
 ───────────────────────────────────────────────────────────────────────────── */
 function dss_set_template_condition( int $id, string $type ): void {
-	$conditions          = get_option( 'elementor_pro_theme_builder_conditions', [] );
+	$conditions         = get_option( 'elementor_pro_theme_builder_conditions', array() );
+	$existing           = isset( $conditions[ $type ] ) ? $conditions[ $type ] : array();
 	$conditions[ $type ] = array_filter(
-		$conditions[ $type ] ?? [],
-		fn( $k ) => $k !== $id,
+		$existing,
+		function( $k ) use ( $id ) { return $k !== $id; },
 		ARRAY_FILTER_USE_KEY
 	);
-	$conditions[ $type ][ $id ] = [ [
+	$conditions[ $type ][ $id ] = array( array(
 		'type'     => 'include',
 		'name'     => 'general',
 		'sub_name' => '',
 		'sub_id'   => '',
-	] ];
+	) );
 	update_option( 'elementor_pro_theme_builder_conditions', $conditions );
 }
 

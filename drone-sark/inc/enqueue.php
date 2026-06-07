@@ -83,12 +83,13 @@ function drone_sark_scripts() {
 	}
 
 	// Localise JS vars
+	$wc_active = class_exists( 'WooCommerce' );
 	wp_localize_script( 'drone-sark-main', 'DroneSark', array(
 		'ajaxUrl'    => admin_url( 'admin-ajax.php' ),
 		'nonce'      => wp_create_nonce( 'drone-sark-nonce' ),
-		'cartUrl'    => wc_get_cart_url(),
-		'checkoutUrl'=> wc_get_checkout_url(),
-		'currency'   => get_woocommerce_currency_symbol(),
+		'cartUrl'    => $wc_active ? wc_get_cart_url()      : home_url( '/cart/' ),
+		'checkoutUrl'=> $wc_active ? wc_get_checkout_url()  : home_url( '/checkout/' ),
+		'currency'   => $wc_active ? get_woocommerce_currency_symbol() : '৳',
 		'siteUrl'    => get_site_url(),
 		'isMobile'   => wp_is_mobile() ? 'true' : 'false',
 	) );

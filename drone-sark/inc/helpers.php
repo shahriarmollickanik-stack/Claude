@@ -170,5 +170,7 @@ add_action( 'wp_ajax_nopriv_drone_sark_load_more', 'drone_sark_load_more_product
  * Check if current page uses Elementor
  */
 function drone_sark_is_elementor_page() {
-	return class_exists( '\Elementor\Plugin' ) && \Elementor\Plugin::$instance->documents->get( get_the_ID() )->is_built_with_elementor();
+	if ( ! class_exists( '\Elementor\Plugin' ) ) return false;
+	$doc = \Elementor\Plugin::$instance->documents->get( get_the_ID() );
+	return $doc && $doc->is_built_with_elementor();
 }
