@@ -1,0 +1,142 @@
+[{
+  "version": "0.4",
+  "title": "Drone Sark – Track Order",
+  "type": "page",
+  "content": [
+    {
+      "id": "to_hero",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#0a0a0a",
+        "padding": {"unit":"px","top":"80","right":"0","bottom":"80","left":"0","isLinked":false}
+      },
+      "elements": [{
+        "id": "to_hero_col",
+        "elType": "column",
+        "settings": {"_column_size": 100, "padding": {"unit":"px","top":"0","right":"60","bottom":"0","left":"60","isLinked":false}},
+        "elements": [
+          {
+            "id": "to_hero_icon",
+            "elType": "widget",
+            "widgetType": "html",
+            "settings": {
+              "html": "<div style='text-align:center;margin-bottom:20px;'><div style='display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:18px;background:rgba(255,255,255,0.1);'><svg width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><rect x='1' y='3' width='15' height='13'/><polygon points='16,8 20,8 23,11 23,16 16,16 16,8'/><circle cx='5.5' cy='18.5' r='2.5'/><circle cx='18.5' cy='18.5' r='2.5'/></svg></div></div>"
+            },
+            "elements": []
+          },
+          {
+            "id": "to_hero_title",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Track Your Order",
+              "header_size": "h1",
+              "align": "center",
+              "title_color": "#ffffff",
+              "typography_font_family": "Inter",
+              "typography_font_size": {"unit":"px","size":48},
+              "typography_font_weight": "800"
+            },
+            "elements": []
+          },
+          {
+            "id": "to_hero_sub",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<p>Enter your order ID to track the status of your delivery</p>",
+              "align": "center",
+              "text_color": "rgba(255,255,255,0.55)",
+              "typography_font_size": {"unit":"px","size":17}
+            },
+            "elements": []
+          }
+        ]
+      }]
+    },
+    {
+      "id": "to_form_sec",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#f8f8f8",
+        "padding": {"unit":"px","top":"80","right":"0","bottom":"80","left":"0","isLinked":false}
+      },
+      "elements": [{
+        "id": "to_form_col",
+        "elType": "column",
+        "settings": {"_column_size": 100, "padding": {"unit":"px","top":"0","right":"60","bottom":"0","left":"60","isLinked":false}},
+        "elements": [
+          {
+            "id": "to_form_sc",
+            "elType": "widget",
+            "widgetType": "shortcode",
+            "settings": {
+              "shortcode": "[woocommerce_order_tracking]",
+              "css_classes": "ds-track-order-form"
+            },
+            "elements": []
+          }
+        ]
+      }]
+    },
+    {
+      "id": "to_steps_sec",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {"unit":"px","top":"80","right":"0","bottom":"80","left":"0","isLinked":false}
+      },
+      "elements": [{
+        "id": "to_steps_col",
+        "elType": "column",
+        "settings": {"_column_size": 100, "padding": {"unit":"px","top":"0","right":"60","bottom":"0","left":"60","isLinked":false}},
+        "elements": [
+          {
+            "id": "to_steps_title",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "How Delivery Works",
+              "header_size": "h2",
+              "align": "center",
+              "title_color": "#0a0a0a",
+              "typography_font_family": "Inter",
+              "typography_font_size": {"unit":"px","size":32},
+              "typography_font_weight": "700"
+            },
+            "elements": []
+          },
+          {
+            "id": "to_steps_space",
+            "elType": "widget",
+            "widgetType": "spacer",
+            "settings": {"space": {"unit":"px","size":40}},
+            "elements": []
+          },
+          {
+            "id": "to_steps_html",
+            "elType": "widget",
+            "widgetType": "html",
+            "settings": {
+              "html": "<div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;max-width:900px;margin:0 auto;'><div style='text-align:center;padding:24px;position:relative;'><div style='width:56px;height:56px;border-radius:50%;background:#0a0a0a;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;'>1</div><h4 style='font-size:15px;font-weight:700;color:#0a0a0a;margin:0 0 8px;'>Order Placed</h4><p style='font-size:13px;color:#777;margin:0;line-height:1.5;'>Your order is confirmed and being processed</p></div><div style='text-align:center;padding:24px;'><div style='width:56px;height:56px;border-radius:50%;background:#0a0a0a;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;'>2</div><h4 style='font-size:15px;font-weight:700;color:#0a0a0a;margin:0 0 8px;'>Packed</h4><p style='font-size:13px;color:#777;margin:0;line-height:1.5;'>Item carefully packed and ready for pickup</p></div><div style='text-align:center;padding:24px;'><div style='width:56px;height:56px;border-radius:50%;background:#0a0a0a;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;'>3</div><h4 style='font-size:15px;font-weight:700;color:#0a0a0a;margin:0 0 8px;'>Shipped</h4><p style='font-size:13px;color:#777;margin:0;line-height:1.5;'>Handed over to Steadfast courier</p></div><div style='text-align:center;padding:24px;'><div style='width:56px;height:56px;border-radius:50%;background:#0a0a0a;color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;'>4</div><h4 style='font-size:15px;font-weight:700;color:#0a0a0a;margin:0 0 8px;'>Delivered</h4><p style='font-size:13px;color:#777;margin:0;line-height:1.5;'>Delivered to you — pay on delivery</p></div></div>"
+            },
+            "elements": []
+          },
+          {
+            "id": "to_steps_note",
+            "elType": "widget",
+            "widgetType": "html",
+            "settings": {
+              "html": "<div style='max-width:600px;margin:40px auto 0;background:#f8f8f8;border-radius:12px;padding:24px;display:flex;align-items:flex-start;gap:14px;'><svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='#0a0a0a' stroke-width='2' flex-shrink='0' style='flex-shrink:0;margin-top:2px;'><circle cx='12' cy='12' r='10'/><line x1='12' y1='8' x2='12' y2='12'/><line x1='12' y1='16' x2='12.01' y2='16'/></svg><div><p style='font-size:14px;color:#333;margin:0 0 6px;font-weight:600;'>Need help with your order?</p><p style='font-size:13px;color:#666;margin:0;line-height:1.5;'>Call us at <a href='tel:+8801234567890' style='color:#0a0a0a;font-weight:600;'>+880 1234 567890</a> or WhatsApp <a href='https://wa.me/8801234567890' style='color:#25D366;font-weight:600;'>Chat Now</a></p></div></div>"
+            },
+            "elements": []
+          }
+        ]
+      }]
+    }
+  ],
+  "page_settings": {"template": "elementor_header_footer"}
+}]

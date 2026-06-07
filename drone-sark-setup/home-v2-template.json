@@ -1,0 +1,333 @@
+[{
+  "version": "0.4",
+  "title": "Drone Sark – Home V2 (Sales Focus)",
+  "type": "page",
+  "content": [
+    {
+      "id": "v2_hero",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {"unit":"px","top":"80","right":"0","bottom":"80","left":"0","isLinked":false}
+      },
+      "elements": [{
+        "id": "v2_hero_inner",
+        "elType": "column",
+        "settings": {"_column_size": 100},
+        "elements": [{
+          "id": "v2_hero_wrap",
+          "elType": "section",
+          "settings": {
+            "layout": "full_width",
+            "gap": "no",
+            "content_position": "middle"
+          },
+          "elements": [
+            {
+              "id": "v2_hero_left",
+              "elType": "column",
+              "settings": {
+                "_column_size": 50,
+                "padding": {"unit":"px","top":"0","right":"60","bottom":"0","left":"60","isLinked":false}
+              },
+              "elements": [
+                {
+                  "id": "v2_badge",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div style='display:inline-flex;align-items:center;gap:8px;background:#f5f5f5;border-radius:99px;padding:6px 14px;margin-bottom:20px;'><span style='width:8px;height:8px;border-radius:50%;background:#000;display:inline-block;'></span><span style='font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#000;'>Bangladesh's #1 Drone Store</span></div>"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "v2_hero_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Fly Higher. See Further.",
+                    "header_size": "h1",
+                    "align": "left",
+                    "title_color": "#0a0a0a",
+                    "typography_font_family": "Inter",
+                    "typography_font_size": {"unit":"px","size":52},
+                    "typography_font_weight": "800",
+                    "typography_line_height": {"unit":"em","size":1.1}
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "v2_hero_sub",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Premium drones & accessories delivered to your door. Cash on Delivery available across Bangladesh.</p>",
+                    "text_color": "#555555",
+                    "typography_font_size": {"unit":"px","size":17},
+                    "typography_line_height": {"unit":"em","size":1.7}
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "v2_hero_stats",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div style='display:flex;gap:32px;margin:28px 0;'><div><div style='font-size:28px;font-weight:800;color:#0a0a0a;'>500+</div><div style='font-size:13px;color:#888;font-weight:500;'>Products</div></div><div style='width:1px;background:#e8e8e8;'></div><div><div style='font-size:28px;font-weight:800;color:#0a0a0a;'>2000+</div><div style='font-size:13px;color:#888;font-weight:500;'>Happy Clients</div></div><div style='width:1px;background:#e8e8e8;'></div><div><div style='font-size:28px;font-weight:800;color:#0a0a0a;'>★ 4.9</div><div style='font-size:13px;color:#888;font-weight:500;'>Rating</div></div></div>"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "v2_hero_btns",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div style='display:flex;gap:12px;flex-wrap:wrap;'><a href='/shop/' style='display:inline-flex;align-items:center;gap:8px;background:#0a0a0a;color:#fff;padding:14px 28px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;'>Shop Now <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M5 12h14M12 5l7 7-7 7'/></svg></a><a href='/contact/' style='display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0a0a0a;padding:14px 28px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;border:2px solid #e8e8e8;'>Contact Us</a></div>"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "v2_hero_right",
+              "elType": "column",
+              "settings": {
+                "_column_size": 50,
+                "background_background": "classic",
+                "background_color": "#f5f5f5",
+                "border_radius": {"unit":"px","top":"24","right":"0","bottom":"0","left":"24","isLinked":false},
+                "padding": {"unit":"px","top":"40","right":"40","bottom":"40","left":"40","isLinked":true}
+              },
+              "elements": [
+                {
+                  "id": "v2_hero_img",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {"url": "https://via.placeholder.com/600x500/f0f0f0/999999?text=🔁+Replace+with+Drone+Image"},
+                    "image_size": "full",
+                    "align": "center",
+                    "_css_classes": "ds-hero-image"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }]
+      }]
+    },
+    {
+      "id": "v2_trust",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#f8f8f8",
+        "padding": {"unit":"px","top":"24","right":"0","bottom":"24","left":"0","isLinked":false}
+      },
+      "elements": [{
+        "id": "v2_trust_col",
+        "elType": "column",
+        "settings": {"_column_size": 100, "padding": {"unit":"px","top":"0","right":"60","bottom":"0","left":"60","isLinked":false}},
+        "elements": [{
+          "id": "v2_trust_html",
+          "elType": "widget",
+          "widgetType": "html",
+          "settings": {
+            "html": "<div style='display:flex;justify-content:center;gap:48px;flex-wrap:wrap;'><div style='display:flex;align-items:center;gap:10px;'><svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='#0a0a0a' stroke-width='2'><rect x='1' y='3' width='15' height='13'/><polygon points='16,8 20,8 23,11 23,16 16,16 16,8'/><circle cx='5.5' cy='18.5' r='2.5'/><circle cx='18.5' cy='18.5' r='2.5'/></svg><span style='font-size:14px;font-weight:600;color:#333;'>Free Delivery</span></div><div style='display:flex;align-items:center;gap:10px;'><svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='#0a0a0a' stroke-width='2'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg><span style='font-size:14px;font-weight:600;color:#333;'>Genuine Products</span></div><div style='display:flex;align-items:center;gap:10px;'><svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='#0a0a0a' stroke-width='2'><rect x='2' y='5' width='20' height='14' rx='2'/><line x1='2' y1='10' x2='22' y2='10'/></svg><span style='font-size:14px;font-weight:600;color:#333;'>Cash on Delivery</span></div><div style='display:flex;align-items:center;gap:10px;'><svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='#0a0a0a' stroke-width='2'><path d='M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.33 14a19.79 19.79 0 01-3.07-8.67A2 2 0 013.25 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 10.1a16 16 0 006 6'/></svg><span style='font-size:14px;font-weight:600;color:#333;'>Expert Support</span></div></div>"
+          },
+          "elements": []
+        }]
+      }]
+    },
+    {
+      "id": "v2_cats_sec",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {"unit":"px","top":"80","right":"0","bottom":"80","left":"0","isLinked":false}
+      },
+      "elements": [{
+        "id": "v2_cats_col",
+        "elType": "column",
+        "settings": {"_column_size": 100, "padding": {"unit":"px","top":"0","right":"60","bottom":"0","left":"60","isLinked":false}},
+        "elements": [
+          {
+            "id": "v2_cats_title",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "Shop by Category",
+              "header_size": "h2",
+              "align": "center",
+              "title_color": "#0a0a0a",
+              "typography_font_family": "Inter",
+              "typography_font_size": {"unit":"px","size":36},
+              "typography_font_weight": "700"
+            },
+            "elements": []
+          },
+          {
+            "id": "v2_cats_sub",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<p>Browse our full range of drones, parts & accessories</p>",
+              "align": "center",
+              "text_color": "#777777",
+              "typography_font_size": {"unit":"px","size":16}
+            },
+            "elements": []
+          },
+          {
+            "id": "v2_cats_space",
+            "elType": "widget",
+            "widgetType": "spacer",
+            "settings": {"space": {"unit":"px","size":32}},
+            "elements": []
+          },
+          {
+            "id": "v2_cats_sc",
+            "elType": "widget",
+            "widgetType": "shortcode",
+            "settings": {"shortcode": "[product_categories number=\"4\" columns=\"4\" hide_empty=\"0\"]"},
+            "elements": []
+          }
+        ]
+      }]
+    },
+    {
+      "id": "v2_prods_sec",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#f8f8f8",
+        "padding": {"unit":"px","top":"80","right":"0","bottom":"80","left":"0","isLinked":false}
+      },
+      "elements": [{
+        "id": "v2_prods_col",
+        "elType": "column",
+        "settings": {"_column_size": 100, "padding": {"unit":"px","top":"0","right":"60","bottom":"0","left":"60","isLinked":false}},
+        "elements": [
+          {
+            "id": "v2_prods_header",
+            "elType": "widget",
+            "widgetType": "html",
+            "settings": {
+              "html": "<div style='display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:16px;'><div><h2 style='font-size:36px;font-weight:700;color:#0a0a0a;margin:0 0 4px;'>Latest Products</h2><p style='font-size:15px;color:#777;margin:0;'>Fresh arrivals every week</p></div><a href='/shop/' style='display:inline-flex;align-items:center;gap:8px;border:2px solid #0a0a0a;color:#0a0a0a;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;'>View All <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M5 12h14M12 5l7 7-7 7'/></svg></a></div>"
+            },
+            "elements": []
+          },
+          {
+            "id": "v2_prods_sc",
+            "elType": "widget",
+            "widgetType": "shortcode",
+            "settings": {"shortcode": "[products limit=\"12\" columns=\"4\" orderby=\"date\" order=\"DESC\"]"},
+            "elements": []
+          },
+          {
+            "id": "v2_prods_more_space",
+            "elType": "widget",
+            "widgetType": "spacer",
+            "settings": {"space": {"unit":"px","size":32}},
+            "elements": []
+          },
+          {
+            "id": "v2_prods_more_btn",
+            "elType": "widget",
+            "widgetType": "html",
+            "settings": {
+              "html": "<div style='text-align:center;'><a href='/shop/' style='display:inline-flex;align-items:center;gap:8px;background:#0a0a0a;color:#fff;padding:14px 36px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;'>Load More Products <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M5 12h14M12 5l7 7-7 7'/></svg></a></div>"
+            },
+            "elements": []
+          }
+        ]
+      }]
+    },
+    {
+      "id": "v2_offer_sec",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#0a0a0a",
+        "padding": {"unit":"px","top":"80","right":"0","bottom":"80","left":"0","isLinked":false}
+      },
+      "elements": [{
+        "id": "v2_offer_col",
+        "elType": "column",
+        "settings": {"_column_size": 100, "padding": {"unit":"px","top":"0","right":"60","bottom":"0","left":"60","isLinked":false}},
+        "elements": [{
+          "id": "v2_offer_html",
+          "elType": "widget",
+          "widgetType": "html",
+          "settings": {
+            "html": "<div style='display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:32px;'><div><div style='font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:12px;'>Limited Time Offer</div><h2 style='font-size:40px;font-weight:800;color:#fff;margin:0 0 12px;line-height:1.15;'>Get 10% Off Your<br>First Order</h2><p style='font-size:16px;color:rgba(255,255,255,0.6);margin:0;'>Use code <strong style='color:#fff;background:rgba(255,255,255,0.15);padding:2px 10px;border-radius:4px;'>DRONE10</strong> at checkout</p></div><a href='/shop/' style='display:inline-flex;align-items:center;gap:8px;background:#fff;color:#0a0a0a;padding:16px 32px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap;'>Shop Now <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5'><path d='M5 12h14M12 5l7 7-7 7'/></svg></a></div>"
+          },
+          "elements": []
+        }]
+      }]
+    },
+    {
+      "id": "v2_reviews_sec",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {"unit":"px","top":"80","right":"0","bottom":"80","left":"0","isLinked":false}
+      },
+      "elements": [{
+        "id": "v2_reviews_col",
+        "elType": "column",
+        "settings": {"_column_size": 100, "padding": {"unit":"px","top":"0","right":"60","bottom":"0","left":"60","isLinked":false}},
+        "elements": [
+          {
+            "id": "v2_rev_title",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+              "title": "What Our Customers Say",
+              "header_size": "h2",
+              "align": "center",
+              "title_color": "#0a0a0a",
+              "typography_font_family": "Inter",
+              "typography_font_size": {"unit":"px","size":36},
+              "typography_font_weight": "700"
+            },
+            "elements": []
+          },
+          {
+            "id": "v2_rev_sub",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+              "editor": "<p>Trusted by 2000+ drone enthusiasts across Bangladesh</p>",
+              "align": "center",
+              "text_color": "#777777",
+              "typography_font_size": {"unit":"px","size":16}
+            },
+            "elements": []
+          },
+          {
+            "id": "v2_rev_space",
+            "elType": "widget",
+            "widgetType": "spacer",
+            "settings": {"space": {"unit":"px","size":32}},
+            "elements": []
+          },
+          {
+            "id": "v2_rev_html",
+            "elType": "widget",
+            "widgetType": "html",
+            "settings": {
+              "html": "<div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;'><div style='background:#f8f8f8;border-radius:16px;padding:28px;'><div style='color:#f5a623;font-size:18px;margin-bottom:12px;'>★★★★★</div><p style='font-size:15px;color:#333;line-height:1.6;margin:0 0 20px;'>\"Amazing quality drone! Fast delivery and cash on delivery made it so easy. Highly recommend Drone Sark!\"</p><div style='display:flex;align-items:center;gap:12px;'><div style='width:40px;height:40px;border-radius:50%;background:#ddd;display:flex;align-items:center;justify-content:center;font-weight:700;color:#666;'>R</div><div><div style='font-size:14px;font-weight:600;color:#0a0a0a;'>Rahim Uddin</div><div style='font-size:12px;color:#999;'>Dhaka</div></div></div></div><div style='background:#f8f8f8;border-radius:16px;padding:28px;'><div style='color:#f5a623;font-size:18px;margin-bottom:12px;'>★★★★★</div><p style='font-size:15px;color:#333;line-height:1.6;margin:0 0 20px;'>\"Best drone shop in Bangladesh! Got my DJI Mini within 2 days. The repair service is also excellent.\"</p><div style='display:flex;align-items:center;gap:12px;'><div style='width:40px;height:40px;border-radius:50%;background:#ddd;display:flex;align-items:center;justify-content:center;font-weight:700;color:#666;'>K</div><div><div style='font-size:14px;font-weight:600;color:#0a0a0a;'>Karim Hossain</div><div style='font-size:12px;color:#999;'>Chittagong</div></div></div></div><div style='background:#f8f8f8;border-radius:16px;padding:28px;'><div style='color:#f5a623;font-size:18px;margin-bottom:12px;'>★★★★★</div><p style='font-size:15px;color:#333;line-height:1.6;margin:0 0 20px;'>\"Genuine products, great prices. I've bought 3 drones from them already. Will keep coming back!\"</p><div style='display:flex;align-items:center;gap:12px;'><div style='width:40px;height:40px;border-radius:50%;background:#ddd;display:flex;align-items:center;justify-content:center;font-weight:700;color:#666;'>S</div><div><div style='font-size:14px;font-weight:600;color:#0a0a0a;'>Sumaiya Akter</div><div style='font-size:12px;color:#999;'>Sylhet</div></div></div></div><div style='background:#f8f8f8;border-radius:16px;padding:28px;'><div style='color:#f5a623;font-size:18px;margin-bottom:12px;'>★★★★★</div><p style='font-size:15px;color:#333;line-height:1.6;margin:0 0 20px;'>\"Customer support is outstanding. They helped me choose the right drone for aerial photography.\"</p><div style='display:flex;align-items:center;gap:12px;'><div style='width:40px;height:40px;border-radius:50%;background:#ddd;display:flex;align-items:center;justify-content:center;font-weight:700;color:#666;'>T</div><div><div style='font-size:14px;font-weight:600;color:#0a0a0a;'>Tanvir Ahmed</div><div style='font-size:12px;color:#999;'>Rajshahi</div></div></div></div></div>"
+            },
+            "elements": []
+          }
+        ]
+      }]
+    }
+  ],
+  "page_settings": {"template": "elementor_header_footer"}
+}]
