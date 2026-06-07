@@ -1,0 +1,247 @@
+[{
+  "version": "0.4",
+  "title": "Drone Sark – Footer",
+  "type": "footer",
+  "content": [
+    {
+      "id": "ftr_root",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "background_background": "classic",
+        "background_color": "#000000",
+        "padding": {"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true}
+      },
+      "elements": [
+        {
+          "id": "ftr_main",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "flex_direction": "row",
+            "align_items": "flex-start",
+            "flex_wrap": "wrap",
+            "gap": {"unit":"px","column":"40","row":"40"},
+            "padding": {"unit":"px","top":"64","right":"24","bottom":"64","left":"24","isLinked":false},
+            "max_width": {"unit":"px","size":1280}
+          },
+          "elements": [
+            {
+              "id": "ftr_col1",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "align_items": "flex-start",
+                "gap": {"unit":"px","column":"16","row":"16"},
+                "width": {"unit":"%","size":28},
+                "width_tablet": {"unit":"%","size":45},
+                "width_mobile": {"unit":"%","size":100}
+              },
+              "elements": [
+                {
+                  "id": "ftr_logo",
+                  "elType": "widget",
+                  "widgetType": "site-logo",
+                  "settings": {
+                    "width": {"unit":"px","size":150},
+                    "align": "left",
+                    "_css_classes": "ds-footer-logo"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "ftr_tagline",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Elevate Your Perspective</p>",
+                    "text_color": "rgba(255,255,255,0.45)",
+                    "typography_font_size": {"unit":"px","size":14}
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "ftr_social",
+                  "elType": "widget",
+                  "widgetType": "social-icons",
+                  "settings": {
+                    "social_icon_list": [
+                      {"_id":"fb","social_icon":{"value":"fab fa-facebook","library":"fa-brands"},"link":{"url":"#"},"item_icon_color":"custom","icon_color":"rgba(255,255,255,0.7)","icon_hover_color":"#ffffff","icon_bg_color":"rgba(255,255,255,0.08)","icon_bg_hover_color":"rgba(255,255,255,0.2)"},
+                      {"_id":"ig","social_icon":{"value":"fab fa-instagram","library":"fa-brands"},"link":{"url":"#"},"item_icon_color":"custom","icon_color":"rgba(255,255,255,0.7)","icon_hover_color":"#ffffff","icon_bg_color":"rgba(255,255,255,0.08)","icon_bg_hover_color":"rgba(255,255,255,0.2)"},
+                      {"_id":"yt","social_icon":{"value":"fab fa-youtube","library":"fa-brands"},"link":{"url":"#"},"item_icon_color":"custom","icon_color":"rgba(255,255,255,0.7)","icon_hover_color":"#ffffff","icon_bg_color":"rgba(255,255,255,0.08)","icon_bg_hover_color":"rgba(255,255,255,0.2)"},
+                      {"_id":"wa","social_icon":{"value":"fab fa-whatsapp","library":"fa-brands"},"link":{"url":"https://wa.me/8801234567890"},"item_icon_color":"custom","icon_color":"rgba(255,255,255,0.7)","icon_hover_color":"#ffffff","icon_bg_color":"rgba(255,255,255,0.08)","icon_bg_hover_color":"rgba(255,255,255,0.2)"}
+                    ],
+                    "icon_size": {"unit":"px","size":18},
+                    "icon_spacing": {"unit":"px","size":8},
+                    "icon_padding": {"unit":"em","size":0.5},
+                    "border_radius": {"unit":"px","top":"8","right":"8","bottom":"8","left":"8","isLinked":true},
+                    "columns_gap": {"unit":"px","size":8}
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "ftr_col2",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "align_items": "flex-start",
+                "gap": {"unit":"px","column":"12","row":"12"},
+                "width": {"unit":"%","size":28},
+                "width_tablet": {"unit":"%","size":45},
+                "width_mobile": {"unit":"%","size":100}
+              },
+              "elements": [
+                {
+                  "id": "ftr_c2_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "CONTACT US",
+                    "header_size": "h4",
+                    "title_color": "rgba(255,255,255,0.35)",
+                    "typography_font_size": {"unit":"px","size":11},
+                    "typography_font_weight": "700",
+                    "typography_letter_spacing": {"unit":"px","size":2},
+                    "typography_text_transform": "uppercase"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "ftr_contact_html",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div style='display:flex;flex-direction:column;gap:12px;'><div style='display:flex;align-items:center;gap:10px;'><svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.45)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.33 14a19.79 19.79 0 01-3.07-8.67A2 2 0 013.25 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 10.1a16 16 0 006 6'/></svg><a href='tel:+8801234567890' style='color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;'>+880 1234 567890</a></div><div style='display:flex;align-items:center;gap:10px;'><svg width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.45)' stroke-width='2'><path d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'/><polyline points='22,6 12,13 2,6'/></svg><a href='mailto:info@dronesark.com' style='color:rgba(255,255,255,0.7);font-size:14px;text-decoration:none;'>info@dronesark.com</a></div></div><div style='margin-top:20px;'><p style='font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin:0 0 12px;'>QUICK LINKS</p><ul style='list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;'><li><a href='/' style='color:rgba(255,255,255,0.6);font-size:14px;text-decoration:none;'>Home</a></li><li><a href='/shop/' style='color:rgba(255,255,255,0.6);font-size:14px;text-decoration:none;'>Shop</a></li><li><a href='/contact/' style='color:rgba(255,255,255,0.6);font-size:14px;text-decoration:none;'>Contact</a></li><li><a href='/track-order/' style='color:rgba(255,255,255,0.6);font-size:14px;text-decoration:none;'>Track Order</a></li></ul></div>"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "ftr_col3",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "align_items": "flex-start",
+                "gap": {"unit":"px","column":"12","row":"12"},
+                "width": {"unit":"%","size":20},
+                "width_tablet": {"unit":"%","size":45},
+                "width_mobile": {"unit":"%","size":100}
+              },
+              "elements": [
+                {
+                  "id": "ftr_pay_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "PAYMENT PARTNER",
+                    "header_size": "h4",
+                    "title_color": "rgba(255,255,255,0.35)",
+                    "typography_font_size": {"unit":"px","size":11},
+                    "typography_font_weight": "700",
+                    "typography_letter_spacing": {"unit":"px","size":2},
+                    "typography_text_transform": "uppercase"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "ftr_cod",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div style='display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px;'><svg width='38' height='38' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.75)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><rect x='1' y='4' width='22' height='16' rx='2'/><line x1='1' y1='10' x2='23' y2='10'/></svg><div><strong style='display:block;font-size:14px;color:#fff;font-weight:700;margin-bottom:3px;'>Cash on Delivery</strong><span style='font-size:12px;color:rgba(255,255,255,0.45);'>Safe &amp; Secure</span></div></div>"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "ftr_col4",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "align_items": "flex-start",
+                "gap": {"unit":"px","column":"12","row":"12"},
+                "width": {"unit":"%","size":20},
+                "width_tablet": {"unit":"%","size":45},
+                "width_mobile": {"unit":"%","size":100}
+              },
+              "elements": [
+                {
+                  "id": "ftr_del_title",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "DELIVERY PARTNER",
+                    "header_size": "h4",
+                    "title_color": "rgba(255,255,255,0.35)",
+                    "typography_font_size": {"unit":"px","size":11},
+                    "typography_font_weight": "700",
+                    "typography_letter_spacing": {"unit":"px","size":2},
+                    "typography_text_transform": "uppercase"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "ftr_steadfast",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div style='display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px;'><svg width='38' height='38' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.75)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><rect x='1' y='3' width='15' height='13'/><polygon points='16,8 20,8 23,11 23,16 16,16 16,8'/><circle cx='5.5' cy='18.5' r='2.5'/><circle cx='18.5' cy='18.5' r='2.5'/></svg><div><strong style='display:block;font-size:14px;color:#fff;font-weight:700;margin-bottom:3px;'>Steadfast</strong><span style='font-size:12px;color:rgba(255,255,255,0.45);'>Courier Service</span></div></div>"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ftr_btm",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "flex_direction": "row",
+            "align_items": "center",
+            "justify_content": "space-between",
+            "flex_wrap": "wrap",
+            "gap": {"unit":"px","column":"16","row":"12"},
+            "padding": {"unit":"px","top":"20","right":"24","bottom":"20","left":"24","isLinked":false},
+            "border_top_width": {"unit":"px","top":"1","right":"0","bottom":"0","left":"0","isLinked":false},
+            "border_color": "rgba(255,255,255,0.08)",
+            "max_width": {"unit":"px","size":1280}
+          },
+          "elements": [
+            {
+              "id": "ftr_copy",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>© 2025 Drone Sark. All rights reserved.</p>",
+                "text_color": "rgba(255,255,255,0.35)",
+                "typography_font_size": {"unit":"px","size":13}
+              },
+              "elements": []
+            },
+            {
+              "id": "ftr_btm_links",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style='display:flex;gap:24px;'><a href='/privacy-policy/' style='color:rgba(255,255,255,0.35);font-size:13px;text-decoration:none;'>Privacy Policy</a><a href='#' style='color:rgba(255,255,255,0.35);font-size:13px;text-decoration:none;'>Terms of Service</a><a href='/track-order/' style='color:rgba(255,255,255,0.35);font-size:13px;text-decoration:none;'>Track Order</a></div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {}
+}]

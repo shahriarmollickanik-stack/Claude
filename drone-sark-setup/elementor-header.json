@@ -1,0 +1,160 @@
+[{
+  "version": "0.4",
+  "title": "Drone Sark – Header",
+  "type": "header",
+  "content": [
+    {
+      "id": "hdr_root",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true},
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "position": "fixed",
+        "z_index": 1000
+      },
+      "elements": [
+        {
+          "id": "hdr_top",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "flex_direction": "row",
+            "align_items": "center",
+            "justify_content": "space-between",
+            "gap": {"unit":"px","column":"32","row":"0"},
+            "padding": {"unit":"px","top":"0","right":"24","bottom":"0","left":"24","isLinked":false},
+            "min_height": {"unit":"px","size":70},
+            "border_bottom_width": {"unit":"px","top":"0","right":"0","bottom":"1","left":"0","isLinked":false},
+            "border_color": "#e8e8e8",
+            "max_width": {"unit":"px","size":1280}
+          },
+          "elements": [
+            {
+              "id": "hdr_logo",
+              "elType": "widget",
+              "widgetType": "site-logo",
+              "settings": {
+                "width": {"unit":"px","size":160},
+                "align": "left"
+              },
+              "elements": []
+            },
+            {
+              "id": "hdr_srch_wrap",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_grow": "1"
+              },
+              "elements": [
+                {
+                  "id": "hdr_srch",
+                  "elType": "widget",
+                  "widgetType": "search-form",
+                  "settings": {
+                    "placeholder": "Search for drones, parts, accessories...",
+                    "button_type": "icon",
+                    "button_icon": {"value":"fas fa-search","library":"fa-solid"},
+                    "skin": "classic",
+                    "input_size": "sm",
+                    "background_color": "#f3f3f3",
+                    "border_radius": {"unit":"px","top":"99","right":"99","bottom":"99","left":"99","isLinked":true},
+                    "input_border_color": "#e8e8e8",
+                    "width": {"unit":"%","size":100}
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "hdr_icons",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "align_items": "center",
+                "gap": {"unit":"px","column":"4","row":"0"}
+              },
+              "elements": [
+                {
+                  "id": "icon_wish",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<a href='/wishlist/' title='Wishlist' style='display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;color:#000;text-decoration:none;transition:background .2s;'><svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z'/></svg></a>"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "icon_cart",
+                  "elType": "widget",
+                  "widgetType": "woocommerce-menu-cart",
+                  "settings": {
+                    "icon": "bag-light",
+                    "items_indicator": "bubble",
+                    "items_indicator_color": "#000000",
+                    "icon_color": "#000000",
+                    "icon_size": {"unit":"px","size":22}
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "icon_acct",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<a href='/my-account/' title='My Account' style='display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;color:#000;text-decoration:none;'><svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2'/><circle cx='12' cy='7' r='4'/></svg></a>"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hdr_nav_bar",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "flex_direction": "row",
+            "padding": {"unit":"px","top":"0","right":"24","bottom":"0","left":"24","isLinked":false},
+            "background_background": "classic",
+            "background_color": "#ffffff",
+            "border_bottom_width": {"unit":"px","top":"0","right":"0","bottom":"1","left":"0","isLinked":false},
+            "border_color": "#e8e8e8",
+            "max_width": {"unit":"px","size":1280}
+          },
+          "elements": [
+            {
+              "id": "hdr_nav",
+              "elType": "widget",
+              "widgetType": "nav-menu",
+              "settings": {
+                "layout": "horizontal",
+                "align_items": "center",
+                "submenu_icon": {"value":"fas fa-chevron-down","library":"fa-solid"},
+                "color_menu_item": "#333333",
+                "color_menu_item_hover": "#000000",
+                "color_menu_item_active": "#000000",
+                "menu_item_padding": {"unit":"em","top":"0.875","right":"1","bottom":"0.875","left":"1","isLinked":false},
+                "typography_font_size": {"unit":"px","size":14},
+                "typography_font_weight": "500",
+                "dropdown_background_color": "#ffffff",
+                "dropdown_color": "#333333",
+                "dropdown_color_hover": "#000000",
+                "pointer": "none",
+                "width": {"unit":"%","size":100}
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": {}
+}]
