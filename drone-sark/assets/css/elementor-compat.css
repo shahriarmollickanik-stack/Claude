@@ -1,0 +1,75 @@
+/* Elementor Pro compatibility overrides */
+
+/* Remove Elementor default padding from sections */
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: var(--ds-container-max);
+}
+
+/* Ensure Elementor pages can use full width */
+.elementor-page .ds-header ~ #page .ds-container,
+.elementor-page .elementor-inner {
+  padding: 0;
+}
+
+/* Fix Elementor button styles to match theme */
+.elementor-button.elementor-size-xs,
+.elementor-button.elementor-size-sm,
+.elementor-button.elementor-size-md,
+.elementor-button.elementor-size-lg,
+.elementor-button.elementor-size-xl {
+  font-family: var(--ds-font-primary) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  border-radius: var(--ds-radius) !important;
+  transition: var(--ds-transition) !important;
+}
+
+/* Elementor WooCommerce product widget overrides */
+.elementor-widget-woocommerce-products .products {
+  display: grid !important;
+  grid-template-columns: repeat(var(--e-woo-products-cols, 3), 1fr) !important;
+  gap: 1.25rem !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* WooCommerce Elementor single product fixes */
+.elementor-widget-wc-add-to-cart .quantity input {
+  height: 48px !important;
+  border-radius: var(--ds-radius) !important;
+  border: 1.5px solid var(--ds-gray-300) !important;
+}
+
+.elementor-widget-wc-add-to-cart .button {
+  background: var(--ds-black) !important;
+  color: var(--ds-white) !important;
+  border-radius: var(--ds-radius) !important;
+  font-family: var(--ds-font-primary) !important;
+  font-weight: 700 !important;
+}
+
+/* Elementor popup / modal fixes */
+.elementor-popup-modal {
+  z-index: 99999;
+}
+
+/* Elementor Pro theme builder header/footer location */
+.elementor-location-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.admin-bar .elementor-location-header {
+  top: 32px;
+}
+
+.elementor-location-footer {
+  background: var(--ds-black);
+}
+
+/* Swiper slider compatibility with Elementor */
+.elementor-widget-slides .swiper-wrapper {
+  align-items: stretch;
+}

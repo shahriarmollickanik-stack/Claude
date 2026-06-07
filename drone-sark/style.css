@@ -1,0 +1,253 @@
+/*
+Theme Name: Drone Sark
+Theme URI: https://dronesark.com
+Author: Drone Sark
+Author URI: https://dronesark.com
+Description: Premium black-and-white WooCommerce theme for Drone Sark. Startup-tech style, Elementor Pro compatible, fully modular and editable.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 8.0
+License: Proprietary
+License URI: https://dronesark.com/license
+Text Domain: drone-sark
+Tags: e-commerce, woocommerce, elementor, black-and-white, minimal, premium, drone, tech, startup
+WC requires at least: 8.0
+WC tested up to: 9.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS
+----------------------------------------------------------------
+1. CSS Variables
+2. Reset & Base
+3. Typography
+4. Layout
+5. Accessibility
+--------------------------------------------------------------*/
+
+/* 1. CSS Variables
+--------------------------------------------------------------*/
+:root {
+  /* Colors */
+  --ds-black: #000000;
+  --ds-white: #ffffff;
+  --ds-gray-50: #f9f9f9;
+  --ds-gray-100: #f3f3f3;
+  --ds-gray-200: #e8e8e8;
+  --ds-gray-300: #d1d1d1;
+  --ds-gray-400: #a0a0a0;
+  --ds-gray-500: #707070;
+  --ds-gray-600: #505050;
+  --ds-gray-700: #333333;
+  --ds-gray-800: #1a1a1a;
+  --ds-gray-900: #0d0d0d;
+
+  /* Accent */
+  --ds-accent: #000000;
+  --ds-accent-hover: #222222;
+  --ds-star: #f5a623;
+
+  /* Typography */
+  --ds-font-primary: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --ds-font-heading: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Font sizes */
+  --ds-text-xs: 0.75rem;
+  --ds-text-sm: 0.875rem;
+  --ds-text-base: 1rem;
+  --ds-text-lg: 1.125rem;
+  --ds-text-xl: 1.25rem;
+  --ds-text-2xl: 1.5rem;
+  --ds-text-3xl: 1.875rem;
+  --ds-text-4xl: 2.25rem;
+  --ds-text-5xl: 3rem;
+  --ds-text-6xl: 3.75rem;
+
+  /* Spacing */
+  --ds-space-1: 0.25rem;
+  --ds-space-2: 0.5rem;
+  --ds-space-3: 0.75rem;
+  --ds-space-4: 1rem;
+  --ds-space-6: 1.5rem;
+  --ds-space-8: 2rem;
+  --ds-space-10: 2.5rem;
+  --ds-space-12: 3rem;
+  --ds-space-16: 4rem;
+  --ds-space-20: 5rem;
+  --ds-space-24: 6rem;
+
+  /* Border */
+  --ds-radius-sm: 4px;
+  --ds-radius: 8px;
+  --ds-radius-lg: 12px;
+  --ds-radius-xl: 16px;
+  --ds-radius-2xl: 24px;
+  --ds-radius-full: 9999px;
+
+  /* Shadows */
+  --ds-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --ds-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --ds-shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+  --ds-shadow-lg: 0 16px 40px rgba(0,0,0,0.15);
+  --ds-shadow-xl: 0 24px 60px rgba(0,0,0,0.2);
+
+  /* Transitions */
+  --ds-transition: all 0.2s ease;
+  --ds-transition-slow: all 0.35s ease;
+
+  /* Container */
+  --ds-container-max: 1280px;
+  --ds-container-padding: 1.5rem;
+
+  /* Header */
+  --ds-header-height: 70px;
+  --ds-mobile-nav-height: 60px;
+}
+
+/* 2. Reset & Base
+--------------------------------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ds-font-primary);
+  font-size: var(--ds-text-base);
+  color: var(--ds-gray-800);
+  background-color: var(--ds-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.admin-bar {
+  padding-top: 32px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--ds-black);
+  text-decoration: none;
+  transition: var(--ds-transition);
+}
+
+a:hover {
+  color: var(--ds-gray-600);
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--ds-font-primary);
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+input,
+textarea,
+select {
+  font-family: var(--ds-font-primary);
+}
+
+/* 3. Typography
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ds-font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ds-black);
+  margin: 0 0 1rem;
+}
+
+h1 { font-size: var(--ds-text-4xl); }
+h2 { font-size: var(--ds-text-3xl); }
+h3 { font-size: var(--ds-text-2xl); }
+h4 { font-size: var(--ds-text-xl); }
+h5 { font-size: var(--ds-text-lg); }
+h6 { font-size: var(--ds-text-base); }
+
+p {
+  margin: 0 0 1rem;
+}
+
+/* 4. Layout
+--------------------------------------------------------------*/
+.ds-container {
+  max-width: var(--ds-container-max);
+  margin: 0 auto;
+  padding: 0 var(--ds-container-padding);
+  width: 100%;
+}
+
+.ds-section {
+  padding: var(--ds-space-16) 0;
+}
+
+.ds-section--sm {
+  padding: var(--ds-space-10) 0;
+}
+
+.ds-section--lg {
+  padding: var(--ds-space-24) 0;
+}
+
+.site-content {
+  min-height: calc(100vh - var(--ds-header-height));
+}
+
+.site-content.has-mobile-nav {
+  padding-bottom: var(--ds-mobile-nav-height);
+}
+
+/* 5. Accessibility
+--------------------------------------------------------------*/
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.skip-link {
+  background: var(--ds-black);
+  color: var(--ds-white);
+  font-weight: 700;
+  left: -100%;
+  padding: 0.75rem 1.5rem;
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+}
+
+.skip-link:focus {
+  left: 0;
+}
