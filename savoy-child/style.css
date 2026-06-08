@@ -1,0 +1,876 @@
+/*
+ Theme Name:   Drone Sark
+ Theme URI:    https://dronesark.com
+ Description:  Drone Sark — Premium Drone Store. Child theme of Savoy.
+ Author:       Drone Sark
+ Author URI:   https://dronesark.com
+ Template:     savoy
+ Version:      1.0.0
+ Text Domain:  drone-sark
+*/
+
+/* ============================================================
+   TABLE OF CONTENTS
+   1.  Variables & Font
+   2.  Global Reset & Typography
+   3.  Buttons
+   4.  Header (Elementor replaces — minimal overrides)
+   5.  Navigation
+   6.  WooCommerce – Product Cards (Shop Loop)
+   7.  WooCommerce – Shop Archive Page
+   8.  WooCommerce – Single Product
+   9.  WooCommerce – Cart & Checkout
+   10. WooCommerce – Misc (Notices, Breadcrumb, Pagination)
+   11. Footer (Elementor replaces — minimal overrides)
+   12. Mobile Bottom Navigation
+   13. Pages (Contact, Track Order, Static)
+   14. Utility / Animations
+   ============================================================ */
+
+/* ─── 1. Variables & Font ─────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+:root {
+  --ds-black:      #0a0a0a;
+  --ds-white:      #ffffff;
+  --ds-gray-50:    #fafafa;
+  --ds-gray-100:   #f5f5f5;
+  --ds-gray-200:   #eeeeee;
+  --ds-gray-300:   #e0e0e0;
+  --ds-gray-500:   #888888;
+  --ds-gray-700:   #444444;
+  --ds-gold:       #f5a623;
+  --ds-green:      #22c55e;
+  --ds-red:        #ef4444;
+
+  --ds-font:       'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ds-radius-sm:  6px;
+  --ds-radius:     8px;
+  --ds-radius-lg:  12px;
+  --ds-radius-xl:  16px;
+  --ds-shadow-sm:  0 1px 3px rgba(0,0,0,.08);
+  --ds-shadow:     0 4px 16px rgba(0,0,0,.10);
+  --ds-shadow-lg:  0 8px 32px rgba(0,0,0,.14);
+  --ds-transition: all .2s ease;
+
+  --ds-container:  1280px;
+  --ds-header-h:   70px;
+}
+
+/* ─── 2. Global Reset & Typography ───────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body,
+body .nm-page-wrap,
+body .nm-page-overflow {
+  font-family: var(--ds-font) !important;
+  color: var(--ds-gray-700);
+  background: var(--ds-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ds-font) !important;
+  color: var(--ds-black);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p, li, td, th, label, input, textarea, select {
+  font-family: var(--ds-font) !important;
+}
+
+a { color: var(--ds-black); transition: var(--ds-transition); }
+a:hover { color: var(--ds-gray-500); }
+
+img { max-width: 100%; height: auto; }
+
+/* ─── 3. Buttons ──────────────────────────────────────────── */
+.button,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce #place_order {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--ds-font) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: .01em;
+  background: var(--ds-black) !important;
+  color: var(--ds-white) !important;
+  border: 2px solid var(--ds-black) !important;
+  border-radius: var(--ds-radius) !important;
+  padding: 11px 24px !important;
+  cursor: pointer;
+  transition: var(--ds-transition) !important;
+  text-decoration: none !important;
+  line-height: 1;
+}
+
+.button:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit:hover,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
+.woocommerce #place_order:hover {
+  background: var(--ds-white) !important;
+  color: var(--ds-black) !important;
+}
+
+.button.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt {
+  background: var(--ds-white) !important;
+  color: var(--ds-black) !important;
+  border-color: var(--ds-gray-300) !important;
+}
+.button.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover {
+  background: var(--ds-black) !important;
+  color: var(--ds-white) !important;
+  border-color: var(--ds-black) !important;
+}
+
+/* ─── 4. Header ────────────────────────────────────────────── */
+/* Elementor Pro replaces the header. These styles handle the
+   placeholder height so content doesn't jump. */
+.nm-header-placeholder {
+  height: var(--ds-header-h) !important;
+}
+
+#nm-header.nm-header {
+  background: var(--ds-white) !important;
+  border-bottom: 1px solid var(--ds-gray-200) !important;
+  box-shadow: none !important;
+}
+
+/* Hide Savoy's default header when Elementor header is active */
+body.elementor-page #nm-header,
+body.elementor-page .nm-header-placeholder {
+  display: none !important;
+}
+
+/* ─── 5. Navigation ───────────────────────────────────────── */
+.nm-menu li a {
+  font-family: var(--ds-font) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--ds-gray-700) !important;
+  transition: var(--ds-transition) !important;
+}
+.nm-menu li a:hover,
+.nm-menu li.current-menu-item > a,
+.nm-menu li.current-menu-ancestor > a {
+  color: var(--ds-black) !important;
+}
+
+/* ─── 6. WooCommerce – Product Cards ─────────────────────── */
+ul.products,
+ul.products.columns-4,
+ul.products.columns-3 {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 1024px) {
+  ul.products { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (max-width: 768px) {
+  ul.products { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+}
+@media (max-width: 480px) {
+  ul.products { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+}
+
+ul.products li.product,
+ul.products li.type-product {
+  background: var(--ds-white) !important;
+  border: 1px solid var(--ds-gray-200) !important;
+  border-radius: var(--ds-radius-lg) !important;
+  overflow: hidden !important;
+  transition: var(--ds-transition) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+ul.products li.product:hover,
+ul.products li.type-product:hover {
+  border-color: var(--ds-gray-300) !important;
+  box-shadow: var(--ds-shadow) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Product image */
+.nm-shop-loop-thumbnail,
+ul.products li.product .woocommerce-loop-product__link img,
+ul.products li.product .attachment-woocommerce_thumbnail {
+  width: 100% !important;
+  aspect-ratio: 1/1 !important;
+  object-fit: contain !important;
+  background: var(--ds-gray-100) !important;
+  display: block !important;
+  transition: transform .3s ease !important;
+  padding: 12px !important;
+}
+ul.products li.product:hover .attachment-woocommerce_thumbnail {
+  transform: scale(1.03) !important;
+}
+
+.nm-shop-loop-thumbnail {
+  background: var(--ds-gray-100) !important;
+  padding: 0 !important;
+}
+.nm-shop-loop-thumbnail img {
+  width: 100% !important;
+  aspect-ratio: 1/1 !important;
+  object-fit: contain !important;
+  padding: 12px !important;
+}
+
+/* Product details */
+.nm-shop-loop-details {
+  padding: 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  flex: 1 !important;
+}
+
+/* Product title */
+.woocommerce-loop-product__title,
+.nm-shop-loop-title-price .woocommerce-loop-product__title,
+h2.woocommerce-loop-product__title {
+  font-family: var(--ds-font) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--ds-black) !important;
+  line-height: 1.4 !important;
+  margin: 0 0 4px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+/* Price */
+.price,
+.woocommerce-Price-amount,
+.nm-shop-loop-title-price .price {
+  font-family: var(--ds-font) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--ds-black) !important;
+  margin: 0 !important;
+}
+.price del,
+.price del .woocommerce-Price-amount {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: var(--ds-gray-500) !important;
+  margin-right: 6px !important;
+}
+.price ins,
+.price ins .woocommerce-Price-amount {
+  text-decoration: none !important;
+  color: var(--ds-black) !important;
+}
+
+/* Rating */
+.star-rating {
+  color: var(--ds-gold) !important;
+  font-size: 12px !important;
+}
+.star-rating::before,
+.star-rating span::before { color: var(--ds-gold) !important; }
+
+/* Sale badge */
+.onsale {
+  background: var(--ds-black) !important;
+  color: var(--ds-white) !important;
+  font-family: var(--ds-font) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .05em;
+  border-radius: var(--ds-radius-sm) !important;
+  padding: 4px 10px !important;
+  min-width: auto !important;
+  min-height: auto !important;
+  line-height: 1.4 !important;
+}
+
+/* Add to cart button on product card */
+.nm-shop-loop-actions .button,
+ul.products li.product .button {
+  width: 100% !important;
+  font-size: 13px !important;
+  padding: 10px 16px !important;
+  margin-top: 8px !important;
+  border-radius: var(--ds-radius) !important;
+}
+
+/* Wishlist button */
+.nm-wishlist-btn,
+.yith-wcwl-add-to-wishlist .add_to_wishlist {
+  background: var(--ds-white) !important;
+  color: var(--ds-black) !important;
+  border: 1px solid var(--ds-gray-200) !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: var(--ds-transition) !important;
+}
+.nm-wishlist-btn:hover {
+  background: var(--ds-black) !important;
+  color: var(--ds-white) !important;
+}
+
+/* Quick view */
+.nm-quickview-btn {
+  font-family: var(--ds-font) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background: rgba(10,10,10,.85) !important;
+  color: var(--ds-white) !important;
+  border-radius: 0 0 var(--ds-radius-lg) var(--ds-radius-lg) !important;
+}
+
+/* ─── 7. WooCommerce – Shop Archive ──────────────────────── */
+.woocommerce-products-header,
+.woocommerce-products-header__title.page-title {
+  font-family: var(--ds-font) !important;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: var(--ds-black) !important;
+  margin-bottom: 8px !important;
+}
+
+.woocommerce-result-count {
+  font-family: var(--ds-font) !important;
+  font-size: 13px !important;
+  color: var(--ds-gray-500) !important;
+}
+
+.woocommerce-ordering select,
+.woocommerce-ordering .orderby {
+  font-family: var(--ds-font) !important;
+  font-size: 13px !important;
+  border: 1px solid var(--ds-gray-200) !important;
+  border-radius: var(--ds-radius) !important;
+  padding: 8px 12px !important;
+  background: var(--ds-white) !important;
+  color: var(--ds-black) !important;
+  outline: none !important;
+  cursor: pointer !important;
+}
+
+/* Breadcrumb */
+.woocommerce-breadcrumb {
+  font-family: var(--ds-font) !important;
+  font-size: 13px !important;
+  color: var(--ds-gray-500) !important;
+  margin-bottom: 24px !important;
+}
+.woocommerce-breadcrumb a { color: var(--ds-gray-500) !important; }
+.woocommerce-breadcrumb a:hover { color: var(--ds-black) !important; }
+
+/* Category title */
+.term-description p {
+  font-family: var(--ds-font) !important;
+  font-size: 15px !important;
+  color: var(--ds-gray-500) !important;
+}
+
+/* Shop sidebar / filter */
+.widget_price_filter .price_slider_wrapper .ui-slider .ui-slider-handle {
+  background: var(--ds-black) !important;
+  border-color: var(--ds-black) !important;
+}
+.widget_price_filter .price_slider_wrapper .ui-widget-header {
+  background: var(--ds-black) !important;
+}
+.widget_price_filter .price_slider_amount .button {
+  background: var(--ds-black) !important;
+  color: var(--ds-white) !important;
+}
+
+/* Pagination */
+.woocommerce-pagination .page-numbers {
+  display: flex !important;
+  gap: 8px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  justify-content: center !important;
+  margin-top: 48px !important;
+}
+.woocommerce-pagination .page-numbers li a,
+.woocommerce-pagination .page-numbers li span {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: 1px solid var(--ds-gray-200) !important;
+  border-radius: var(--ds-radius) !important;
+  font-family: var(--ds-font) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--ds-black) !important;
+  transition: var(--ds-transition) !important;
+  text-decoration: none !important;
+}
+.woocommerce-pagination .page-numbers li a:hover,
+.woocommerce-pagination .page-numbers li span.current {
+  background: var(--ds-black) !important;
+  color: var(--ds-white) !important;
+  border-color: var(--ds-black) !important;
+}
+
+/* ─── 8. WooCommerce – Single Product ────────────────────── */
+.single-product div.product {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 48px !important;
+  align-items: start !important;
+  max-width: var(--ds-container) !important;
+  margin: 0 auto !important;
+  padding: 40px 24px !important;
+}
+@media (max-width: 768px) {
+  .single-product div.product { grid-template-columns: 1fr !important; gap: 24px !important; }
+}
+
+/* Gallery */
+.woocommerce-product-gallery__wrapper img {
+  border-radius: var(--ds-radius-lg) !important;
+  border: 1px solid var(--ds-gray-200) !important;
+}
+.flex-control-thumbs li img {
+  border-radius: var(--ds-radius) !important;
+  border: 2px solid transparent !important;
+  cursor: pointer !important;
+  transition: var(--ds-transition) !important;
+}
+.flex-control-thumbs li img:hover,
+.flex-control-thumbs li img.flex-active {
+  border-color: var(--ds-black) !important;
+}
+
+/* Product summary */
+.single-product .product_title {
+  font-family: var(--ds-font) !important;
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: var(--ds-black) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 12px !important;
+}
+
+.single-product .price {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: var(--ds-black) !important;
+  margin-bottom: 20px !important;
+}
+
+.single-product .woocommerce-product-details__short-description {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: var(--ds-gray-700) !important;
+  margin-bottom: 24px !important;
+}
+
+/* Stock */
+.in-stock { color: var(--ds-green) !important; font-weight: 600 !important; font-size: 13px !important; }
+.out-of-stock { color: var(--ds-red) !important; font-weight: 600 !important; font-size: 13px !important; }
+
+/* Qty + add to cart */
+.single-product .cart {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 16px !important;
+}
+.single-product .qty {
+  width: 80px !important;
+  height: 48px !important;
+  border: 1px solid var(--ds-gray-200) !important;
+  border-radius: var(--ds-radius) !important;
+  font-family: var(--ds-font) !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  background: var(--ds-white) !important;
+  color: var(--ds-black) !important;
+}
+.single-product .cart .button {
+  flex: 1 !important;
+  height: 48px !important;
+  font-size: 15px !important;
+  padding: 0 28px !important;
+}
+
+/* Tabs */
+.woocommerce-tabs .tabs {
+  border-bottom: 2px solid var(--ds-gray-200) !important;
+  display: flex !important;
+  gap: 0 !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 32px !important;
+}
+.woocommerce-tabs .tabs li a {
+  font-family: var(--ds-font) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--ds-gray-500) !important;
+  padding: 12px 24px !important;
+  display: block !important;
+  border-bottom: 2px solid transparent !important;
+  margin-bottom: -2px !important;
+  transition: var(--ds-transition) !important;
+  text-decoration: none !important;
+}
+.woocommerce-tabs .tabs li.active a,
+.woocommerce-tabs .tabs li a:hover {
+  color: var(--ds-black) !important;
+  border-bottom-color: var(--ds-black) !important;
+}
+
+/* Related products */
+.related h2,
+.upsells h2 {
+  font-family: var(--ds-font) !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: var(--ds-black) !important;
+  margin-bottom: 24px !important;
+}
+
+/* ─── 9. WooCommerce – Cart & Checkout ───────────────────── */
+.woocommerce-cart table.cart,
+.woocommerce-checkout table.shop_table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  border: 1px solid var(--ds-gray-200) !important;
+  border-radius: var(--ds-radius-lg) !important;
+  overflow: hidden !important;
+}
+.woocommerce-cart table.cart th,
+.woocommerce-checkout table.shop_table th {
+  background: var(--ds-gray-50) !important;
+  font-family: var(--ds-font) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: var(--ds-gray-500) !important;
+  padding: 14px 16px !important;
+  border-bottom: 1px solid var(--ds-gray-200) !important;
+}
+.woocommerce-cart table.cart td,
+.woocommerce-checkout table.shop_table td {
+  padding: 16px !important;
+  border-bottom: 1px solid var(--ds-gray-200) !important;
+  font-family: var(--ds-font) !important;
+  vertical-align: middle !important;
+}
+
+/* Coupon input */
+.coupon .input-text,
+.woocommerce input[type="text"],
+.woocommerce input[type="email"],
+.woocommerce input[type="tel"],
+.woocommerce input[type="password"],
+.woocommerce textarea,
+.woocommerce select {
+  font-family: var(--ds-font) !important;
+  font-size: 14px !important;
+  border: 1px solid var(--ds-gray-200) !important;
+  border-radius: var(--ds-radius) !important;
+  padding: 11px 14px !important;
+  background: var(--ds-white) !important;
+  color: var(--ds-black) !important;
+  outline: none !important;
+  transition: var(--ds-transition) !important;
+  width: 100% !important;
+}
+.woocommerce input[type="text"]:focus,
+.woocommerce input[type="email"]:focus,
+.woocommerce input[type="tel"]:focus,
+.woocommerce textarea:focus {
+  border-color: var(--ds-black) !important;
+  box-shadow: 0 0 0 3px rgba(10,10,10,.08) !important;
+}
+
+/* Checkout order total */
+.woocommerce-checkout .cart_totals h2,
+.woocommerce-cart .cart_totals h2 {
+  font-family: var(--ds-font) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 16px !important;
+}
+
+/* Order total row */
+.woocommerce .cart_totals tr.order-total td,
+.woocommerce .cart_totals tr.order-total th {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: var(--ds-black) !important;
+}
+
+/* Proceed to checkout */
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+  width: 100% !important;
+  font-size: 16px !important;
+  padding: 16px !important;
+  border-radius: var(--ds-radius) !important;
+  text-align: center !important;
+}
+
+/* Place order */
+.woocommerce #place_order {
+  width: 100% !important;
+  font-size: 16px !important;
+  padding: 16px !important;
+}
+
+/* Checkout labels */
+.woocommerce .woocommerce-checkout label {
+  font-family: var(--ds-font) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--ds-gray-700) !important;
+  margin-bottom: 6px !important;
+  display: block !important;
+}
+
+/* ─── 10. WooCommerce – Misc ──────────────────────────────── */
+/* Notices */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+  font-family: var(--ds-font) !important;
+  font-size: 14px !important;
+  border-radius: var(--ds-radius) !important;
+  padding: 14px 20px !important;
+  margin-bottom: 24px !important;
+}
+.woocommerce-message { border-left-color: var(--ds-black) !important; background: var(--ds-gray-50) !important; }
+.woocommerce-error { border-left-color: var(--ds-red) !important; background: #fff5f5 !important; }
+.woocommerce-info { border-left-color: var(--ds-black) !important; background: var(--ds-gray-50) !important; }
+
+/* Mini cart panel */
+.nm-cart-panel {
+  font-family: var(--ds-font) !important;
+}
+.nm-cart-panel .nm-cart-panel-title {
+  font-family: var(--ds-font) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--ds-black) !important;
+}
+.nm-cart-panel .product_name a {
+  font-family: var(--ds-font) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--ds-black) !important;
+}
+.nm-cart-panel .nm-cart-panel-subtotal {
+  font-family: var(--ds-font) !important;
+  font-weight: 700 !important;
+}
+
+/* ─── 11. Footer ──────────────────────────────────────────── */
+/* Elementor Pro replaces the footer.
+   Hide Savoy's default footer bar. */
+#nm-footer .nm-footer-bar {
+  display: none !important;
+}
+/* Show only when Elementor footer is NOT active */
+body:not(.elementor-page) #nm-footer .nm-footer-bar {
+  display: block !important;
+}
+
+/* Footer widget area (used as a secondary area above footer) */
+#nm-footer .nm-footer-widgets {
+  background: var(--ds-black) !important;
+  padding: 64px 24px !important;
+}
+#nm-footer .nm-footer-widgets .widget-title {
+  font-family: var(--ds-font) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,.35) !important;
+  margin-bottom: 16px !important;
+}
+#nm-footer .nm-footer-widgets,
+#nm-footer .nm-footer-widgets p,
+#nm-footer .nm-footer-widgets li,
+#nm-footer .nm-footer-widgets a {
+  color: rgba(255,255,255,.65) !important;
+  font-family: var(--ds-font) !important;
+  font-size: 14px !important;
+}
+#nm-footer .nm-footer-widgets a:hover { color: var(--ds-white) !important; }
+
+/* ─── 12. Mobile Bottom Navigation ───────────────────────── */
+.ds-mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: var(--ds-white);
+  border-top: 1px solid var(--ds-gray-200);
+  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  box-shadow: 0 -4px 16px rgba(0,0,0,.08);
+}
+
+@media (max-width: 768px) {
+  .ds-mobile-bottom-nav { display: flex; }
+
+  /* Push footer above mobile nav */
+  #nm-footer { padding-bottom: 64px !important; }
+  .elementor-location-footer { padding-bottom: 64px !important; }
+}
+
+.ds-mobile-bottom-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 4px;
+  color: var(--ds-gray-500);
+  text-decoration: none;
+  font-family: var(--ds-font);
+  font-size: 10px;
+  font-weight: 500;
+  transition: var(--ds-transition);
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.ds-mobile-bottom-nav__item:hover,
+.ds-mobile-bottom-nav__item.active {
+  color: var(--ds-black);
+}
+.ds-mobile-bottom-nav__item svg { flex-shrink: 0; }
+
+.ds-mobile-cart-count {
+  position: absolute;
+  top: 6px;
+  right: calc(50% - 18px);
+  background: var(--ds-black);
+  color: var(--ds-white);
+  font-size: 9px;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+/* ─── 13. Pages – Contact, Track Order ───────────────────── */
+/* These pages use Elementor full templates — no extra CSS needed.
+   Below covers default WordPress page content area. */
+.entry-content,
+.page-content {
+  font-family: var(--ds-font) !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: var(--ds-gray-700) !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+/* woocommerce_order_tracking form */
+form.woocommerce-form-track-order {
+  background: var(--ds-white) !important;
+  border: 1px solid var(--ds-gray-200) !important;
+  border-radius: var(--ds-radius-xl) !important;
+  padding: 40px !important;
+  max-width: 520px !important;
+  margin: 0 auto !important;
+}
+form.woocommerce-form-track-order .form-row { margin-bottom: 20px !important; }
+
+/* Contact form 7 */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 textarea {
+  font-family: var(--ds-font) !important;
+  font-size: 14px !important;
+  border: 1px solid var(--ds-gray-200) !important;
+  border-radius: var(--ds-radius) !important;
+  padding: 12px 14px !important;
+  width: 100% !important;
+  transition: var(--ds-transition) !important;
+}
+.wpcf7 input[type="submit"],
+.wpcf7 .wpcf7-submit {
+  background: var(--ds-black) !important;
+  color: var(--ds-white) !important;
+  border: none !important;
+  border-radius: var(--ds-radius) !important;
+  font-family: var(--ds-font) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  padding: 14px 32px !important;
+  cursor: pointer !important;
+  transition: var(--ds-transition) !important;
+}
+
+/* ─── 14. Utility ────────────────────────────────────────── */
+/* Elementor container fix */
+.elementor-section.elementor-section-stretched {
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* Ensure Elementor pages have no extra padding from Savoy */
+body.elementor-page .nm-page-wrap-inner {
+  padding-top: 0 !important;
+}
+
+/* Remove Savoy's default page title */
+body.elementor-page .nm-page-header {
+  display: none !important;
+}
+
+/* Smooth scrollbar width compensation */
+html { scrollbar-gutter: stable; }
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--ds-black);
+  outline-offset: 2px;
+}
